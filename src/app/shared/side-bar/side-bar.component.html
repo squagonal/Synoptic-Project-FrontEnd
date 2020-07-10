@@ -1,11 +1,23 @@
 <div class="sidebar">
-    <img src="https://www.redditstatic.com/desktop2x/img/id-cards/home-banner@2x.png">
-    <div style="text-align: center; font-size: 1em">Welcome to Spring Reddit Clone home page. Come here to
-        check in with your favorite subreddits.</div>
+    <img src="https://www.cgi-group.co.uk/sites/default/files/styles/hero_banner/public/hero_media_cg2.jpg?itok=C204WVSb"  width="400" height="70">
+    <div style="text-align: center; font-size: 1em">Welcome to the CGI Q&A tool. Feel free to ask a question!</div>
     <div style="text-align: center">
         <button class="btnCreatePost" (click)="goToCreatePost()">Create Post</button>
     </div>
     <div style="text-align: center">
-        <button class="btnCreateSubreddit" (click)="goToCreateSubreddit()">Create Subreddit</button>
+        <button class="btnCreateTopic" (click)="goToCreateTopic()">Create Topic</button>
     </div>
+    <form [formGroup]="searchForm" (ngSubmit)="search()">
+        <div>
+            <div class="col-md-10 offset-md-1" style="text-align: center">
+                <input type="text" id="search" class="form-control" [formControlName]="'keyword'" name="keyword" required
+                    autofocus>                               
+            </div>
+        </div>
+        <span class="col-md-6 offset-md-4">
+            <button type="submit" class="login">
+                Search
+            </button>    
+        </span>                
+    </form>
 </div>

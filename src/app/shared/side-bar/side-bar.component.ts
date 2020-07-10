@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { PostService } from '../post.service';
+import { SearchService } from '../search.service';
+import { homedir } from 'os';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HomeComponent } from 'src/app/home/home.component';
 
 @Component({
   selector: 'app-side-bar',
@@ -9,6 +14,10 @@ import { Router } from '@angular/router';
 export class SideBarComponent implements OnInit {
 
   constructor(private router: Router) { }
+  private searchService: SearchService; 
+  keyword : string;
+  searchForm: FormGroup;
+  home : HomeComponent
 
   ngOnInit() {
   }
@@ -17,8 +26,12 @@ export class SideBarComponent implements OnInit {
     this.router.navigateByUrl('/create-post');
   }
 
-  goToCreateSubreddit() {
-    this.router.navigateByUrl('/create-subreddit');
+  goToCreateTopic() {
+    this.router.navigateByUrl('/create-topic');
   }
-
+  search(keyword = this.searchForm.get('keyword').value) {
+    this.searchService.getPostByKeyword(keyword).subscribe(post => {
+      this.home.posts = post;
+    });
+  }  
 }

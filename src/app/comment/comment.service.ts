@@ -21,4 +21,7 @@ export class CommentService {
   getAllCommentsByUser(name: string) {
     return this.httpClient.get<CommentPayload[]>('http://localhost:8080/api/comments/by-user/' + name);
   }
+  getUserVoteCount(name: String) {
+    return this.httpClient.get<BigInteger>('http://localhost:8080/api/votes/totalvotes/' + name);
+  }
 }

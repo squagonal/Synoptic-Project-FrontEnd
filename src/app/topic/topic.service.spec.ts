@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SubredditService } from './subreddit.service';
+import { TopicService } from './Topic.service';
 
-describe('SubredditService', () => {
-  let service: SubredditService;
+describe('TopicService', () => {
+  let service: TopicService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SubredditService);
+    service = TestBed.inject(TopicService);
   });
 
   it('should be created', () => {

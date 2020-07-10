@@ -1,0 +1,11 @@
+<div class="sidebar-view-Topic">
+    <div style="color: black; font-weight: bold">Browse Topics</div>
+    <hr />
+    <span *ngFor="let Topic of Topics">
+        <span class="Topic-text"><a href="/view-Topic/{{Topic.id}}">{{Topic.name}}</a></span>
+        <hr />
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll">
+        <a style="font-weight: bold" routerLink="/list-topics">View All</a>
+    </div>
+</div>

@@ -16,6 +16,7 @@ export class UserProfileComponent implements OnInit {
   comments: CommentPayload[];
   postLength: number;
   commentLength: number;
+  voteCount: BigInteger;
 
   constructor(private activatedRoute: ActivatedRoute, private postService: PostService,
     private commentService: CommentService) {
@@ -29,6 +30,10 @@ export class UserProfileComponent implements OnInit {
       this.comments = data;
       this.commentLength = data.length;
     });
+    this.commentService.getUserVoteCount(this.name).subscribe(data => {
+      this.voteCount = data;
+    });
+    
   }
 
   ngOnInit(): void {

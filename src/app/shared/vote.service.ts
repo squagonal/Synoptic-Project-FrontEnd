@@ -13,4 +13,7 @@ export class VoteService {
   vote(votePayload: VotePayload): Observable<any> {
     return this.http.post('http://localhost:8080/api/votes/', votePayload);
   }
+  getUserVoteCount(name: String) {
+    return this.http.get<BigInteger>('http://localhost:8080/api/votes/totalvotes/' + name);
+  }
 }

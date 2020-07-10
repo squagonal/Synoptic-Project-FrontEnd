@@ -1,6 +1,6 @@
 .sidebar{
     width: 312px;
-    height: 242px;
+    height: 292px;
     --post-line-color: #ccc;    
     border: 1px solid #ccc;
     margin-bottom: 10px;
@@ -14,7 +14,7 @@
     margin-bottom: 10px;
 }
 
-.btnCreatePost, .btnCreateSubreddit{
+.btnCreatePost, .btnCreateTopic{
     background-color: #0079D3;
     border-color: #0079D3;
     color: aliceblue;
@@ -35,7 +35,7 @@
     height: 34px;
 }
 
-.btnCreateSubreddit{
+.btnCreateTopic{
     margin-top: 5px;
     color: #0079D3;
     background-color: transparent;
@@ -46,4 +46,7 @@
     font-weight: 500;
     line-height: 20px;
     color: #1c1c1c;
+}
+.txtSearch {
+    
 }

@@ -18,9 +18,9 @@ header{
 
 .login, .sign-up{    
     background-color: transparent;
-    border-color: #0079D3;
-    color: #0079D3;
-    fill: #0079D3;
+    border-color: #e11937;
+    color: #e11937;
+    fill: #e11937;
     border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
@@ -37,8 +37,8 @@ header{
 }
 
 .sign-up{
-    background-color: #0079D3;
-    border-color: #0079D3;
+    background-color: #e11937;
+    border-color: #e11937;
     color: aliceblue;
 }
 
@@ -48,9 +48,9 @@ header{
 
 .userdetails{    
     background-color: transparent;
-    border-color: #0079D3;
-    color: #0079D3;
-    fill: #0079D3;
+    border-color: #e11937;
+    color: #e11937;
+    fill: #e11937;
     border: 1px solid;
     border-radius: 4px;
     box-sizing: border-box;
@@ -81,7 +81,7 @@ header{
 }
 
 .dropdown-item:hover{
-    background-color: #0079D3;
+    background-color: #e11937;
 }
 
 .dropdown-menu{
